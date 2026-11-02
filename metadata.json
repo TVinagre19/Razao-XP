@@ -1,0 +1,6 @@
+{
+  "name": "Razão XP",
+  "description": "Livro-razão pessoal e rastreador de XP gamificado com contas customizáveis e sincronização GitHub Gist.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
