@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #F4EFE0;
+  --paper-deep: #ECE3C8;
+  --rule: #D9CCA3;
+  --rule-strong: #C7B583;
+  --ink: #221F1A;
+  --ink-soft: #6E6552;
+  --red: #9B3A2C;
+  --green: #3E6B4E;
+  --gold: #A1791F;
+  --navy: #28344A;
+  --navy-soft: #3C4A65;
+  --white: #FFFCF3;
+}
+
+body {
+  background-color: #EFE8D4;
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.font-spectral {
+  font-family: 'Spectral', Georgia, serif;
+}
+
+.font-spectral-sc {
+  font-family: 'Spectral SC', 'Spectral', Georgia, serif;
+}
+
+.font-mono-plex {
+  font-family: 'IBM Plex Mono', Menlo, Monaco, Consolas, monospace;
+}
+
+.font-sans-plex {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Authentic bookkeeper lined ledger paper */
+.ledger-paper {
+  background: repeating-linear-gradient(to bottom, transparent, transparent 31px, var(--rule) 32px), var(--paper);
+  border: 1px solid var(--rule-strong);
+  box-shadow: 0 1px 0 var(--rule-strong), 0 10px 32px rgba(34, 31, 26, 0.14);
+  position: relative;
+}
+
+.ledger-margin-line::before {
+  content: "";
+  position: absolute;
+  left: 78px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--red);
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .ledger-margin-line::before {
+    display: none;
+  }
+}
+
+/* Stamp effect for acquired rewards */
+.stamp-acquired {
+  border: 2.5px double var(--green);
+  color: var(--green);
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transform: rotate(-11deg);
+  line-height: 1.2;
+}
+
+/* Smooth touch ripple & taps */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
